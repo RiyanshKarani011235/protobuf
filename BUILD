@@ -709,6 +709,9 @@ py_proto_library(
     protoc = ":protoc",
     py_libs = [
         ":python_srcs",
+
+				# originally //external:six
+				# (https://github.com/bazelbuild/rules_docker/issues/367#issuecomment-376646366)
         "@six//:six",
     ],
     py_extra_srcs = glob(["python/**/__init__.py"]),
